@@ -62,7 +62,6 @@ func (e Events) IsValid() bool {
 	return true
 }
 
-// if event has passed, schedule it for next year
 func (e *Event) ScheduleForNextYear() {
 	e.StartTime = time.Now().AddDate(1, 0, 0).Unix()
 	e.EndTime = time.Now().AddDate(1, 0, 0).Unix()
